@@ -17,6 +17,8 @@ jobs:
         run: |
           npm install
           npm run build
+          echo !dist/ >> .gitignore
+          echo src/ >> .gitignore
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
